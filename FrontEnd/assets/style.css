@@ -30,6 +30,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+	background-color: rgb(255, 254, 249);
 }
 ol, ul {
 	list-style: none;
@@ -186,3 +187,45 @@ footer nav ul {
 	margin: 2em
 }
 
+.navigation {
+	display: flex;
+	justify-content: center;
+	gap: 10px;
+	margin-bottom: 50px;
+}
+
+button {
+	color: #1D6154;
+	border: 1px solid #1D6154;
+	border-radius: 20px;
+	background-color: white;
+	font-size: 16px;
+	padding: 5px;
+	font-style: italic;
+}
+
+button:hover {
+	background-color: #1D6154;
+	color: white;	
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.se-connecter {
+	text-align: center;
+}
+
+.login {
+	margin:30px;
+}
+
+.login input {
+	margin-bottom: 30px;
+	border: 1px solid white;
+	box-shadow: 10px 5px 55px -10px rgba(0,0,0,0.33);
+	width: 250px;
+	height: 25px;
+}
