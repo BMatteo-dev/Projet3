@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title>Sophie Bluel - login</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Work+Sans&display=swap" rel="stylesheet">
+	<meta name="description" content="">
+	<link rel="stylesheet" href="./assets/style.css">
+    <script src="login.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Sophie Bluel <span>Architecte d'intérieur</span></h1>
+        <nav>
+            <ul>
+                <li>projets</li>
+                <li>contact</li>
+                <li><a href="login.html">login</a></li>
+                <li><img src="./assets/icons/instagram.png" alt="Instagram"></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="se-connecter">
+        <div class="login">
+            <h2>Log In</h2>
+            <form action="http://localhost:5678/api/users/login" method="POST">
+                <p>E-mail</p>
+                <input class="e-mail" type="email" name="email">
+                <p>Mot de passe</p>
+                <input class="mot-de-passe" type="password" name="motdepasse">
+                <button class="envoyer">Se connecter</button>
+            </form>
+            <p class="mdp-oublier"><a href="">Mot de pass oublié ?</a></p>
+        </div>
+    </section>
+    
+</body>
+</html>
