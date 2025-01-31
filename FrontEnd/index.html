@@ -9,9 +9,10 @@
 	<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Work+Sans&display=swap" rel="stylesheet">
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 	<meta name="description" content="">
-	<link rel="stylesheet" href="./assets/style.css">
+	<link rel="stylesheet" href="assets/style.css">
 	<script src="gallery.js" defer></script>
 	<script src="login.js" defer></script>
+	<script src="modal.js" defer></script>
 </head>
 <body>
 	<div class="edition">
@@ -43,7 +44,7 @@
 	<section id="portfolio">
 		<div class="mesProjets">
 			<h2>Mes Projets</h2>
-				<p class="modifier"><i class="fa-regular fa-pen-to-square" id="icon"></i>modifier</p>
+			<p class="modifier"><i class="fa-regular fa-pen-to-square" id="icon"></i>modifier</p>
 		</div>
 		<nav class="navigation">
 		</nav>
@@ -64,6 +65,55 @@
 		</form>
 	</section>
 </main>
+
+<!-- modale 1-->
+<aside id="modal1" class="modale">
+	<div class="contenu">
+		<span class="close-btn">&times;</span>
+		<div id="titre-modale">
+			<h2>Galerie photo</h2>
+		</div>
+		<div class="gallery-modale">
+		</div>
+		<div class="bordure">
+		</div>
+		<button class="add-photos">Ajouter une photo</button>
+	</div>
+</aside>
+
+<!-- modale 2 -->
+
+<aside id="modal2" class="modale">
+	<div class="contenu">
+		<i class="fa-solid fa-arrow-left" id="retour"></i>
+		<span class="close-btn">&times;</span>
+		<div id="titre-modale">
+			<h2>Ajout photo</h2>
+		</div>
+		<div class="form-ajout-photo">
+			<form id="formulaire" action="http://localhost:5678/api/works" method="POST">
+				<i class="fa-regular fa-image" id="icone-image"></i>
+				<input type="file" id="imageUrl" name="imageUrl">
+				<label for="imageUrl" class="ajouter-photo">+ Ajouter photo</label>
+				<p id="taille-max">jpg, png: 4mo max</p>
+		</div>
+				<div class ="titre-et-cat">
+					<p>Titre</p>
+					<input type="text" class="title" name="title">
+					<p>Catégorie</p>
+					<select id="categoryId" name="categoryId">
+						<option value="" hidden></option>
+						<option value="Objets">Objets</option>
+						<option value="Appartements">Appartements</option>
+						<option value="Hotels & restaurants">Hotels & restaurants</option>
+					</select>
+				</div>
+			</form>
+			<div id="bordure">
+			</div>
+		<button class="valider-photos">Valider</button>
+	</div>
+</aside>
 
 <footer>
 	<nav>

@@ -6,7 +6,9 @@ function afficherProjets(projets) {
     // Créer une boucle pour afficher tous les projets dans la galerie
     for (let i = 0; i < projets.length; i++) {
         const article = projets[i];
+        const id = article.id
         const maFigure = document.createElement("figure");
+        maFigure.id = id;
         const imageProjet = document.createElement("img");
         imageProjet.src = article.imageUrl;
         const descriptionImage = document.createElement("figcaption");
