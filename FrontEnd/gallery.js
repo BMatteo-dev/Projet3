@@ -33,6 +33,7 @@ async function menuCategorie() {
     const monSet = new Set(categorie.map(categorie => categorie.name));
 
     const navigation = document.querySelector(".navigation");
+    navigation.innerHTML ="";
 
     // Bouton "Tous"
     const tousLesProjets = document.createElement("button");

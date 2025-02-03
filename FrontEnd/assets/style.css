@@ -462,3 +462,11 @@ a {
     font-size: 20px;
     cursor: pointer;	
 }
+
+#preview {
+	width: 100px;
+	height: 150px;
+	display: none;
+	margin: auto;
+
+}
