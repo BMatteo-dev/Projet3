@@ -38,11 +38,19 @@ async function menuCategorie() {
     // Bouton "Tous"
     const tousLesProjets = document.createElement("button");
     tousLesProjets.innerText = "Tous";
+    tousLesProjets.classList.add("active");
     tousLesProjets.addEventListener("click", function () {
+        document.querySelectorAll("button").forEach(function(button) {
+            button.classList.remove("active");
+        })
+        tousLesProjets.classList.add("active");
+
         afficherProjets(projets);
     });
 
     navigation.appendChild(tousLesProjets);
+
+    
 
     // Créer un bouton pour chaque catégorie
     monSet.forEach(function(categorie) {
@@ -51,10 +59,14 @@ async function menuCategorie() {
         navigation.appendChild(choix);
 
         // Ajouter un événement pour chaque bouton de catégorie
-        choix.addEventListener("click", function () {
+        choix.addEventListener("click", function (event) {
             const projetsObjet = projets.filter(function(projet) {
                 return projet.category.name === choix.innerText;
             });
+            document.querySelectorAll("button").forEach(function(button) {
+                button.classList.remove("active");
+            })
+            choix.classList.add("active");
 
             afficherProjets(projetsObjet);
         });
